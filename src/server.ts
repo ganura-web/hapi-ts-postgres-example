@@ -14,9 +14,9 @@ const server = new hapi.Server(hapiOptions);
 
 const init = async () => {
     const sequelize = initDb(config);
-    sequelize.sync();
     await server.register(vision);
     server.route(routes);
+    sequelize.sync();
 
     server.views({
         engines: {
@@ -29,6 +29,4 @@ const init = async () => {
     await server.start();
 };
 
-init().then(() => {
-    console.log('Server started'); // tslint:disable-line
-});
+init();
