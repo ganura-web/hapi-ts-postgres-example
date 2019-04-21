@@ -1,11 +1,15 @@
 import * as hapi from 'hapi';
 
-const server = new hapi.Server();
+const hapiOptions: hapi.ServerOptions = {
+    port: 8008
+};
+
+const server = new hapi.Server(hapiOptions);
 
 const init = async () => {
-  await server.start();
+    await server.start();
 };
 
 init().then(() => {
-  console.log('Server started');
+    console.log('Server started');
 });

@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "test": "echo \"no tests\"",
-    "dev": "nodemon dist/server.js"
+    "dev": "tsc -w & nodemon dist/server.js"
   },
   "keywords": [
     "hapi",
@@ -17,7 +17,7 @@
     "hapi": "^18.0.0"
   },
   "devDependencies": {
-    "@types/hapi": "^17.8.4",
+    "@types/hapi": "^18.0.0",
     "@types/node": "^10.12.18",
     "nodemon": "^1.18.9"
   }
