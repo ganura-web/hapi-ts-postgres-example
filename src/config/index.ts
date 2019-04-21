@@ -1,3 +1,8 @@
 import rc from 'rc';
-
-export default rc('env');
+interface IConfig {
+    database: string;
+    username: string;
+    password: string;
+}
+const config: IConfig = rc('env') as IConfig;
+export default config;

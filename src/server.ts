@@ -3,9 +3,9 @@ import 'firebase/database';
 import handlebars from 'handlebars';
 import * as hapi from 'hapi';
 import vision from 'vision';
-import routes from './routes';
-
 import config from './config';
+import initDb from './db';
+import routes from './routes';
 
 const hapiOptions: hapi.ServerOptions = {
     debug: { request: ['error'] },
@@ -15,6 +15,8 @@ const hapiOptions: hapi.ServerOptions = {
 const server = new hapi.Server(hapiOptions);
 
 const init = async () => {
+    const sequelize = initDb(config);
+    sequelize.sync();
     await server.register(vision);
     server.route(routes);
 
