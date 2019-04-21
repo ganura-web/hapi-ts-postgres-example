@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "test": "echo \"no tests\"",
-    "dev": "tsc -w & nodemon dist/server.js"
+    "dev": "concurrently -n tsc,server \"tsc -w\" \"nodemon dist/server.js\""
   },
   "keywords": [
     "hapi",
@@ -14,11 +14,17 @@
   "author": "Anurag Sharma <mrshanksster@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "hapi": "^18.0.0"
+    "concurrently": "^4.1.0",
+    "handlebars": "^4.1.2",
+    "hapi": "^18.0.0",
+    "inert": "^5.1.3",
+    "vision": "^5.4.4"
   },
   "devDependencies": {
     "@types/hapi": "^18.0.0",
     "@types/node": "^10.12.18",
-    "nodemon": "^1.18.9"
+    "@types/vision": "^5.3.6",
+    "nodemon": "^1.18.9",
+    "tslint": "^5.16.0"
   }
 }
