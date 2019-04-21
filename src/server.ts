@@ -1,5 +1,3 @@
-import * as firebase from 'firebase/app';
-import 'firebase/database';
 import handlebars from 'handlebars';
 import * as hapi from 'hapi';
 import vision from 'vision';
@@ -28,7 +26,6 @@ const init = async () => {
         path: './views',
         relativeTo: __dirname
     });
-    firebase.initializeApp(config);
     await server.start();
 };
 
