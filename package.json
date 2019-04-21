@@ -1,5 +1,5 @@
 {
-  "name": "ts-node-server",
+  "name": "hapi-ts-postgres-example",
   "version": "1.0.0",
   "description": "mock description",
   "main": "dist/server.js",
