@@ -15,16 +15,20 @@
   "license": "MIT",
   "dependencies": {
     "concurrently": "^4.1.0",
+    "firebase": "^5.10.0",
     "handlebars": "^4.1.2",
     "hapi": "^18.0.0",
     "inert": "^5.1.3",
+    "rc": "^1.2.8",
     "vision": "^5.4.4"
   },
   "devDependencies": {
     "@types/hapi": "^18.0.0",
     "@types/node": "^10.12.18",
+    "@types/rc": "^1.1.0",
     "@types/vision": "^5.3.6",
     "nodemon": "^1.18.9",
-    "tslint": "^5.16.0"
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.4"
   }
 }
