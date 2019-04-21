@@ -1,8 +1,9 @@
 import { ServerRoute } from 'hapi';
+import handlers from '../handlers';
 
 const routes: ServerRoute[] = [
     {
-        handler: () => 'Stuff',
+        handler: handlers.home,
         method: 'GET',
         options: {
             description: 'Route'

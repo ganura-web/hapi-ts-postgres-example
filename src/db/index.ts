@@ -10,6 +10,7 @@ export default function({
     username: string;
     password: string;
 }) {
+    /* tslint:disable:object-literal-sort-keys */
     const sequelize = new Sequelize({
         database,
         password,

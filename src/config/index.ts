@@ -5,4 +5,5 @@ interface IConfig {
     password: string;
 }
 const config: IConfig = rc('env') as IConfig;
+
 export default config;
