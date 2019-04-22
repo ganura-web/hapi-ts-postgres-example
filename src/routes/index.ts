@@ -1,5 +1,6 @@
 import { ServerRoute } from '@hapi/hapi';
 import handlers from '../handlers';
+import { joiValidationRules } from '../models/Contact';
 
 const routes: ServerRoute[] = [
     {
@@ -15,19 +16,21 @@ const routes: ServerRoute[] = [
         method: 'GET',
         options: {
             description: 'Get contacts',
-            tags: ['API']
+            tags: ['api', 'contacts']
+        },
+        path: '/api/contacts'
+    },
+    {
+        handler: handlers.contacts.create,
+        method: 'POST',
+        options: {
+            description: 'Get contacts',
+            tags: ['api', 'contacts'],
+            validate: {
+                payload: joiValidationRules
+            }
         },
         path: '/api/contacts'
     }
-    // ,
-    // {
-    //     handler: handlers.contacts,
-    //     method: 'POST',
-    //     options: {
-    //         description: 'Get contacts',
-    //         tags: ['API']
-    //     },
-    //     path: '/api/contacts'
-    // }
 ];
 export default routes;
