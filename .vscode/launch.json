@@ -7,11 +7,35 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "nodemon",
+            "runtimeExecutable": "nodemon",
+            "program": "${workspaceFolder}/dist/server.js",
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "windows": {
+                "program": "${workspaceFolder}\\dist\\server.js"
+            },
+            "preLaunchTask": "tsc: watch - tsconfig.json"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach by Process ID",
+            "processId": "${command:PickProcess}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\dist\\server.js",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+            "protocol": "inspector",
+            "program": "${workspaceFolder}/src/server.ts",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+            "windows": {
+                "outFiles": ["${workspaceFolder}\\dist\\**\\*.js"],
+                "program": "${workspaceFolder}\\src\\server.ts"
+            }
         }
     ]
 }

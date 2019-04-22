@@ -1,5 +1,5 @@
 import * as joi from '@hapi/joi';
-import { Column, Model, Table, Unique } from 'sequelize-typescript';
+import { AllowNull, Column, Model, Table, Unique } from 'sequelize-typescript';
 
 export const joiValidationRules = joi
     .object({
@@ -25,6 +25,7 @@ class Contact extends Model<Contact> {
     @Column
     public lastName!: string;
 
+    @AllowNull(false)
     @Unique
     @Column
     public email!: string;
