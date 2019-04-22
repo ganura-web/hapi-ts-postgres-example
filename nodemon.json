@@ -1,0 +1,4 @@
+{
+    "watch": ["/dist/**/*.js*"],
+    "restart": "rs"
+}

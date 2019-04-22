@@ -7,6 +7,10 @@
     "test": "echo \"no tests\"",
     "dev": "concurrently -n tsc,server \"tsc -w\" \"nodemon dist/server.js\""
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anuragrksharma/hapi-ts-postgres-example"
+  },
   "keywords": [
     "hapi",
     "typescript"
@@ -14,25 +18,28 @@
   "author": "Anurag Sharma <mrshanksster@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@hapi/glue": "^6.1.0",
+    "@hapi/hapi": "^18.3.1",
+    "@hapi/inert": "^5.2.0",
+    "@hapi/joi": "^15.0.0",
+    "@hapi/vision": "^5.5.2",
     "concurrently": "^4.1.0",
     "handlebars": "^4.1.2",
-    "hapi": "^18.0.0",
-    "inert": "^5.1.3",
+    "hapi-swagger": "^9.4.2",
     "pg": "^7.10.0",
     "pg-hstore": "^2.3.2",
     "rc": "^1.2.8",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^5.7.1",
-    "sequelize-typescript": "^1.0.0-alpha.9",
-    "vision": "^5.4.4"
+    "sequelize-typescript": "^1.0.0-alpha.9"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.26",
-    "@types/hapi": "^18.0.0",
+    "@types/hapi__hapi": "^18.2.0",
+    "@types/hapi__vision": "^5.5.0",
     "@types/node": "^10.12.18",
     "@types/rc": "^1.1.0",
     "@types/validator": "^10.11.0",
-    "@types/vision": "^5.3.6",
     "nodemon": "^1.18.9",
     "tslint": "^5.16.0",
     "typescript": "^3.4.4"
