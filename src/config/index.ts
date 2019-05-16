@@ -1,9 +1,9 @@
 import rc from 'rc';
-interface IConfig {
+interface Config {
     database: string;
     username: string;
     password: string;
 }
-const config: IConfig = rc('env') as IConfig;
+const config: Config = rc('env') as Config;
 
 export default config;

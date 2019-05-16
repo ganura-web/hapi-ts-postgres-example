@@ -1,9 +1,9 @@
 import Boom from '@hapi/boom';
-import { Request, ResponseToolkit } from '@hapi/hapi';
+import { Request } from '@hapi/hapi';
 import Contacts from '../models/Contact';
 
 export default {
-    create: async (request: Request, h: ResponseToolkit) => {
+    create: async (request: Request) => {
         const data = request.payload as Contacts;
         try {
             return await Contacts.create(data);
