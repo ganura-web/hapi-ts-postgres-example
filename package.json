@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.26",
+    "@types/hapi__glue": "^6.1.0",
     "@types/hapi__hapi": "^18.2.0",
     "@types/hapi__vision": "^5.5.0",
     "@types/lodash": "^4.14.123",
