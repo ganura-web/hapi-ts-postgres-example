@@ -1,16 +1,12 @@
 import { Sequelize } from 'sequelize-typescript';
 import Contact from '../models/Contact';
+import { Config } from '../config';
 
 export default function({
     database,
     username,
     password
-}: {
-    database: string;
-    username: string;
-    password: string;
-}): Sequelize {
-    /* tslint:disable:object-literal-sort-keys */
+}: Config): Sequelize {
     const sequelize = new Sequelize({
         database,
         password,

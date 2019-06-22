@@ -1,5 +1,5 @@
 import rc from 'rc';
-interface Config {
+export interface Config {
     database: string;
     username: string;
     password: string;
