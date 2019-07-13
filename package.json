@@ -27,7 +27,7 @@
     "concurrently": "^4.1.0",
     "handlebars": "^4.1.2",
     "hapi-swagger": "^9.4.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "pg": "^7.10.0",
     "pg-hstore": "^2.3.2",
     "rc": "^1.2.8",
