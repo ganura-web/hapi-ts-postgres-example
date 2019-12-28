@@ -25,7 +25,7 @@
     "@hapi/joi": "^15.0.0",
     "@hapi/vision": "^5.5.2",
     "concurrently": "^4.1.0",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.3.0",
     "hapi-swagger": "^9.4.2",
     "lodash": "^4.17.13",
     "pg": "^7.10.0",
