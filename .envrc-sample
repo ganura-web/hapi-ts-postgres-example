@@ -1,0 +1,5 @@
+{
+    "database": "postgres",
+    "username": "postgres",
+    "password": "example"
+}
