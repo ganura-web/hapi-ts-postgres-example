@@ -1,8 +1,9 @@
 dependencies:
+  '@hapi/boom': 7.4.11
   '@hapi/glue': 6.2.0
   '@hapi/hapi': 18.4.0
   '@hapi/inert': 5.2.2
-  '@hapi/joi': 15.1.1
+  '@hapi/joi': 16.1.8
   '@hapi/vision': 5.5.4
   concurrently: 4.1.2
   handlebars: 4.7.2
@@ -16,8 +17,10 @@ dependencies:
   sequelize-typescript: 1.1.0_6ca2f5c571bf60c38cd9c16dfb7302cb
 devDependencies:
   '@types/bluebird': 3.5.29
+  '@types/hapi__boom': 7.4.1
   '@types/hapi__glue': 6.1.0
   '@types/hapi__hapi': 18.2.6
+  '@types/hapi__joi': 16.0.9
   '@types/hapi__vision': 5.5.1
   '@types/lodash': 4.14.149
   '@types/node': 10.17.14
@@ -361,6 +364,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-OCutwjDZ4aFS6PB1UZ988C4YgwlBHJd6wCeQqaLdmadZ/7e+w79+hbMUFC1QXDNCmdyoRfAFdm0RypzwR+Qpag==
+  /@types/hapi__boom/7.4.1:
+    dev: true
+    resolution:
+      integrity: sha512-x/ZK824GomII7Yoei/nMoB46NQcSfGe0iVpZK3uUivxIAfUUSzRvu8RQO7ZkKapIgzgshHZc+GR+z/BQ8l2VLg==
   /@types/hapi__boom/9.0.1:
     dependencies:
       '@hapi/boom': 9.0.0
@@ -3470,14 +3477,17 @@ packages:
     resolution:
       integrity: sha512-7tDlwhrBG+oYFdXNOjILSurpfQyuVgkRe3hB2q8TEssamDHB7BbLWYkYO98nTn0FibfdFroFKDjndbgufAgS/Q==
 specifiers:
+  '@hapi/boom': 7.4.11
   '@hapi/glue': ^6.2.0
   '@hapi/hapi': ^18.4.0
   '@hapi/inert': ^5.2.2
-  '@hapi/joi': ^15.1.1
+  '@hapi/joi': ^16.1.1
   '@hapi/vision': ^5.5.4
   '@types/bluebird': ^3.5.29
+  '@types/hapi__boom': '7'
   '@types/hapi__glue': ^6.1.0
   '@types/hapi__hapi': ^18.2.6
+  '@types/hapi__joi': '16'
   '@types/hapi__vision': ^5.5.1
   '@types/lodash': ^4.14.149
   '@types/node': ^10.17.14

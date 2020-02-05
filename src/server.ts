@@ -6,7 +6,7 @@ import initDb from './db';
 import error from './extensions/error';
 import routes from './routes';
 
-const init = async () => {
+const init = async (): Promise<void> => {
     const sequelize = initDb(config);
     const server = await compose(pluginManifest);
     server.route(routes);
