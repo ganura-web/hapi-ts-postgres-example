@@ -5,6 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "test": "echo \"no tests\"",
+    "html": "cp -r src/views/ dist/views",
     "dev": "concurrently -n tsc,server \"tsc -w\" \"nodemon --delay 1 dist/server.js\"",
     "lint": "eslint src/**/*.ts"
   },

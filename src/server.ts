@@ -17,9 +17,10 @@ const init = async (): Promise<void> => {
         engines: {
             html: handlebars
         },
-        layout: './views/layouts',
-        path: './views',
-        relativeTo: __dirname
+        layout: 'layouts/default',
+        path: '../src/views',
+        relativeTo: __dirname,
+        isCached: false // should be set to true for production
     });
     await server.start();
 };

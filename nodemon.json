@@ -1,4 +1,4 @@
 {
-    "watch": ["/dist/**/*.js*"],
+    "watch": ["/dist/**/*.js*", "/src/views/**/*.html"],
     "restart": "rs"
 }
