@@ -4,12 +4,17 @@ import { joiValidationRules } from '../models/Contact';
 
 const routes: ServerRoute[] = [
     {
-        handler: handlers.home,
+        handler: handlers.home.getView,
         method: 'GET',
         options: {
             description: 'Route'
         },
         path: '/'
+    },
+    {
+      method: 'POST',
+      handler: handlers.home.createContact,
+      path: '/'
     },
     {
         handler: handlers.contacts.getAll,

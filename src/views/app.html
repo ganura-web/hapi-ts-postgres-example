@@ -1,1 +1,77 @@
-<div>Partial Contents</div>
+<div class="col s8">
+    <form class="col s12" action="/" method="post">
+        <div class="row">
+            <div class="input-field col s6">
+                <input
+                    placeholder="First Name"
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    class="validate"
+                />
+            </div>
+            <div class="input-field col s6">
+                <input
+                    placeholder="Last Name"
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    class="validate"
+                />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input
+                    placeholder="Email"
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="validate"
+                />
+            </div>
+            <div class="input-field col s6">
+                <input
+                    placeholder="Company"
+                    id="company"
+                    name="company"
+                    type="text"
+                    class="validate"
+                />
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input
+                    placeholder="Phone"
+                    id="phone"
+                    name="phone"
+                    type="text"
+                    class="validate"
+                />
+            </div>
+        </div>
+        <button type="submit">Enter</button>
+    </form>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each contacts}}
+        <tr>
+            <td>{{ firstName }}</td>
+            <td>{{ email }}</td>
+            <td>{{ phone }}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

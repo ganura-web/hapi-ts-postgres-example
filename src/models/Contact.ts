@@ -11,10 +11,10 @@ export const joiValidationRules = joi
         firstName: joi.string().min(1),
         lastName: joi.string().min(1),
         phone: joi
-            .number()
+            .string()
             .min(10)
             .required()
-            .default(1234567890)
+            .default('1234567890')
     })
     .label('Contact');
 @Table
@@ -34,7 +34,7 @@ class Contact extends Model<Contact> {
     public company!: string;
 
     @Column
-    public phone!: number;
+    public phone!: string;
 }
 
 export default Contact;
