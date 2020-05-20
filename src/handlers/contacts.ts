@@ -3,7 +3,7 @@ import { Request } from '@hapi/hapi';
 import Contacts from '../models/Contact';
 
 export default {
-    create: async (request: Request) => {
+    create: async (request: Request): Promise<Contacts> => {
         const data = request.payload as Contacts;
         try {
             return await Contacts.create(data);
@@ -11,7 +11,7 @@ export default {
             throw Boom.boomify(e);
         }
     },
-    getAll: async () => {
+    getAll: async (): Promise<Contacts[]> => {
         return await Contacts.findAll();
     }
 };
